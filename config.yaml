@@ -1,4 +1,4 @@
 options:
     kernel-parameters:
-        description: space separated list of paramters in the style accepted by sysctl(8).
+        description: semi-colon separated list of paramters in the style accepted by sysctl.conf. No quotes needed, even in case of multiple parameters.
         type: string
