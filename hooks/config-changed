@@ -2,10 +2,11 @@
 
 FILE=/etc/sysctl.d/90-kernel-parameters-charm
 param=""
-PARAMS=`config-get kernel-parameters`
+PARAMS=$(config-get kernel-parameters)
+PARAM_SEP=';'
 
 # Sanitize string, remove trailing and leading blanks
-PARAMS="$(echo -e ${PARAMS} | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+PARAMS=$(echo -e "${PARAMS}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
 if [[ -z $PARAMS ]]; then
     exit 0
@@ -16,7 +17,7 @@ else
 fi
 
 while [[ ${#PARAMS} -gt 0 ]]; do
-    if [[ $PARAMS =~ ";" ]]; then
+    if [[ $PARAMS =~ $PARAM_SEP ]]; then
         param=${PARAMS%%;*}
         PARAMS=${PARAMS#*;}
     else
@@ -25,7 +26,7 @@ while [[ ${#PARAMS} -gt 0 ]]; do
     fi
     param="$(echo -e "${param}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*=[[:space:]]*/=/' -e 's/[[:space:]]*$//')"
     echo "* Setting Kernel Parameter in ${FILE}: ${param}"
-    echo $param >> $FILE
+    echo "$param" >> $FILE
 done
 echo "*** Setting Parameters in running Kernel"
 sysctl -p $FILE
