@@ -1,0 +1,11 @@
+name: kernel-parameters
+summary: "Adjust Kernel Parameters"
+maintainer: Landscape Team <landscape-team@canonical.com>
+description: |
+    Adjust kernel parameters.
+subordinate: true
+tags: [ops]
+requires:
+    container:
+        interface: juju-info
+        scope: container

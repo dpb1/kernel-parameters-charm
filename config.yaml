@@ -1,0 +1,4 @@
+options:
+    kernel-parameters:
+        description: space separated list of paramters in the style accepted by sysctl(8).
+        type: string
