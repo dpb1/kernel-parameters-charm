@@ -1,10 +1,10 @@
 name: kernel-parameters
 summary: "Adjust Kernel Parameters"
-maintainer: Landscape Team <landscape-team@canonical.com>
+maintainer: David Britton <davidpbritton@gmail.com>
 description: |
     Adjust kernel parameters.
-subordinate: true
 tags: [ops]
+subordinate: true
 requires:
     container:
         interface: juju-info
