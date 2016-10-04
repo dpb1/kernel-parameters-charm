@@ -1,3 +1,5 @@
+*.pyc
+.tox
 trusty
 xenial
 builds

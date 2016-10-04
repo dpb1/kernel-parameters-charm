@@ -1,5 +1,5 @@
+nose
 flake8
-pytest
 charmhelpers
 fixtures
 coverage
