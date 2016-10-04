@@ -1,6 +1,7 @@
 name: kernel-parameters
 summary: "Adjust Kernel Parameters"
 maintainer: David Britton <davidpbritton@gmail.com>
+series: [precise, trusty, xenial]
 description: |
     Adjust kernel parameters.
 tags: [ops]
