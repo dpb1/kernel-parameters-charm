@@ -1,0 +1,7 @@
+flake8
+pytest
+charmhelpers
+fixtures
+coverage
+testtools
+git+git://github.com/freeekanayaka/charm-fixtures@master#egg=charmfixtures

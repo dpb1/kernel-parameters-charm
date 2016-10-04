@@ -1,2 +1,3 @@
-includes: ['layer:basic']  # if you use any interfaces, add them here
-repo: git@github.com:dpb1/kernel-parameters-charm.git
+includes: 
+    - 'layer:basic'
+repo: git@github.com:dpb1/layer-kernel-parameters.git
