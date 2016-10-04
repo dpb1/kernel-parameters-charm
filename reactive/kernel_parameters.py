@@ -1,7 +1,7 @@
 from charms.reactive import when_not, set_state
 from charmhelpers.core import hookenv
 
-from .helpers import write_sysctl, load_sysctl_file
+from lib.helpers import write_sysctl, load_sysctl_file
 
 SYSCTL_FILE = "/etc/sysctl.d/90-kernel-parameters-charm"
 
